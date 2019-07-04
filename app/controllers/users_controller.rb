@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @title = t("title.user_show", user_name: @user.name)
-    load_more :activities
+    @activities = @user.activities.paginate(page: params[:page],
+      per_page: Settings.per_page)
   end
 
   private

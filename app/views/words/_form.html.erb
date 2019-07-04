@@ -1,0 +1,12 @@
+<%= form_tag words_path, method: :GET do %>
+
+  <%= label_tag(:key_word, t("key_word")) %>
+  <%= text_field_tag :key_word, params[:key_word], required: "required" %>
+
+  <%= radio_button_tag(:word, "button") %>
+  <%= label_tag(:word_button, t("word")) %>
+  <%= radio_button_tag(:course, "button") %>
+  <%= label_tag(:course_button, t("course")) %>
+  <%= submit_tag t("search"), class: "form_submit" %>
+
+<% end %>
