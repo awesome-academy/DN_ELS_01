@@ -8,47 +8,62 @@
 #   avatar: "https://via.placeholder.com/80x100")
 # end
 
-# # Users - activities
+# Users - activities
+users = User.all
+users.each do |user|
+  status = Faker::Lorem.sentence(5)
+  act_type = [0, 1].sample
+  user.activities.create!(status: status, act_type: act_type )
+  sleep(1)
+end
+
+# # Following relationships
 # users = User.all
-# users.each do |user|
-#   status = Faker::Lorem.sentence(5)
-#   act_type = [0, 1].sample
-#   user.activities.create!(status: status, act_type: act_type )
+# user  = users.first
+# following = users[2..20]
+# followers = users[10..20]
+# following.each { |followed| user.follow(followed) }
+# followers.each { |follower| follower.follow(user) }
+
+# # Courses
+# 10.times do |n|
+#   name  = Faker::Name.unique.name
+#   image = "https://via.placeholder.com/120x150"
+#   description = Faker::Lorem.sentence(10)
+#   duration = 20
+#   question_num = 20
+#   Course.create!(name: name, image: image, description: description,
+#     duration: duration, question_num: question_num)
 # end
 
-# Following relationships
-users = User.all
-user  = users.first
-following = users[2..20]
-followers = users[10..20]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+# 50.times do |n|
+#   course_id = (1..10).to_a.sample
+#   user_id = (1..21).to_a.sample
+#   Lesson.create!(course_id: course_id, user_id: user_id)
+# end
 
-# Courses
-10.times do |n|
-  name  = Faker::Name.unique.name
-  image = "https://via.placeholder.com/120x150"
-  description = Faker::Lorem.sentence(10)
-  duration = 20
-  question_num = 20
-  Course.create!(name: name, image: image, description: description,
-    duration: duration, question_num: question_num)
-end
+# courses = Course.all
+# courses.each do |course|
+#   10.times do |n|
+#     name = Faker::Name.name
+#     meaning = Faker::Lorem.sentence(10)
+#     speech= Faker::Lorem.sentence(10)
+#     example = Faker::Lorem.sentence(10)
+#     course.words.create!(name: name, meaning: meaning, speech: speech,
+#       example: example)
+#   end
+# end
 
-50.times do |n|
-  course_id = (1..10).to_a.sample
-  user_id = (1..21).to_a.sample
-  Lesson.create!(course_id: course_id, user_id: user_id)
-end
+# 50.times do |n|
+#   word_id = (1..100).to_a.sample
+#   user_id = (1..21).to_a.sample
+#   is_favorite = [true, false].sample
+#   is_learned = [true, false].sample
+#   WordDetail.create!(word_id: word_id, user_id: user_id,
+#     is_learned: is_learned, is_favorite: is_favorite)
+# end
 
-courses = Course.all
-courses.each do |course|
-  10.times do |n|
-    name = Faker::Educator.subject
-    meaning = Faker::Lorem.sentence(10)
-    speech= Faker::Lorem.sentence(10)
-    example = Faker::Lorem.sentence(10)
-    course.words.create!(name: name, meaning: meaning, speech: speech,
-      example: example)
-  end
-end
+# users = User.all
+# users.each do |user|
+#   user.activities.delete
+# end

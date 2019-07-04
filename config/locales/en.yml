@@ -1,0 +1,26 @@
+en:
+  not_found: "The content you are looking for doesn's exist"
+  design: "Design by [DN_OE25_Ruby]Hung Ngo"
+  about: "About"
+  contact: "Contact"
+  elearning: "E-Learning"
+  home: "Home"
+  help: "Help"
+  profile: "Profile"
+  log_in: "Login"
+  word: "Word"
+  word_type: "Learned: %{learned} | Favorite: %{favorite}"
+  follow: "Follow:"
+  follow_type: "Follower: %{follower} | Following: %{following}"
+  word_list: "Word List"
+  start_lesson: "Start Lesson"
+  posted_ago: "Posted %{time} ago."
+  more: "Load more"
+  activities: "Activities"
+  welcome: "Welcome!"
+
+  title:
+    user_show: "%{user_name} | Show Page"
+    home: "Home | E-Learning"
+
+

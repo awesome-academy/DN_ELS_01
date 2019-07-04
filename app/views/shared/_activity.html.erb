@@ -1,0 +1,8 @@
+<div class="record" data-id="<%= activity.id %>">
+  <p><%= activity.user.name %></p>
+  <p><%= activity.act_type %></p>
+  <p><%= activity.status %></p>
+  <p><%= t("posted_ago",time: distance_of_time_in_words(activity.created_at,
+    Time.now))%></p>
+  <hr>
+</div>

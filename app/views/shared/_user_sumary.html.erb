@@ -1,0 +1,16 @@
+<%= image_tag @user.avatar %>
+<h1><%= @user.name %></h1>
+<h4><%= t "word" %></h4>
+<span>
+  <%= t("word_type", learned: @user.word_details.learned.count,
+    favorite: @user.word_details.favorite.count) %>
+</span>
+<hr>
+<h4><%= t "follow" %></h4>
+<span>
+  <%= t("follow_type", follower: @user.followers.count,
+    following: @user.following.count) %>
+</span>
+<hr>
+<%= link_to t("word_list"), "#" , class: "btn btn-primary" %>
+<%= link_to t("start_lesson"), "#" , class: "btn btn-primary" %>
