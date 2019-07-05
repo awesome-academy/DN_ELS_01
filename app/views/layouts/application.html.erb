@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t "home" %></title>
+    <meta charset="utf-8">
+    <%= render "layouts/rails_default"%>
+    <%= render "layouts/shim" %>
+  </head>
+  <body>
+    <%= render "layouts/header"%>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= render "layouts/footer"%>
+    </div>
+  </body>
+</html>
