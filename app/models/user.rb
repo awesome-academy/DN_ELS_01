@@ -13,4 +13,9 @@ class User < ApplicationRecord
   def follow other_user
     following << other_user
   end
+
+  def feed
+    @activites = Activity.follow_current_user Relationship.follower_ids(id), id
+    @activites.available_act(id)
+  end
 end

@@ -1,0 +1,17 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= render "shared/user_sumary", user: @user %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @activities.any? %>
+      <h3><%= t "activities"%></h3>
+      <hr>
+      <div class="load_part">
+        <%= render partial: "shared/activity", collection: @activities %>
+      </div>
+      <%= render "shared/load_more", load_path: user_path %>
+    <% end %>
+  </div>
+</div>
