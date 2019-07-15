@@ -18,9 +18,14 @@ en:
   more: "Load more"
   activities: "Activities"
   welcome: "Welcome!"
+  course: "Course"
+  alphabetical: "Alphabetical"
+  submit: "Submit"
+  filter: "Filter"
+  search: "Search"
+  key_word: "Key word:"
 
   title:
     user_show: "%{user_name} | Show Page"
     home: "Home | E-Learning"
-
-
+    words_index: "Words | Index"

@@ -16,4 +16,3 @@
 //= require jquery-ui
 //= require activestorage
 //= require turbolinks
-//= require load_more.js

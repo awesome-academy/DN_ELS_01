@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-md-3">
+    <h1><%= t "filter" %></h1>
+    <hr>
+    <%= render "form", courses_name: @courses_name %>
+  </div>
+  <div class="col-md-6">
+    <h1><%= t "word_list" %></h1>
+    <hr>
+    <%= render @words %>
+    <%= will_paginate @words %>
+  </div>
+  <div class="col-md-3">
+  </div>
+</div>

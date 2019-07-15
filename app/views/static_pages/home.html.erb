@@ -9,10 +9,8 @@
       <% if @activities.any? %>
         <h3><%= t "activities"%></h3>
         <hr>
-        <div class="load_part">
-          <%= render partial: "shared/activity", collection: @activities %>
-        </div>
-        <%= render "shared/load_more", load_path: root_path %>
+        <%= render partial: "shared/activity", collection: @activities %>
+        <%= will_paginate @activities %>
       <% end %>
     </div>
   </div>

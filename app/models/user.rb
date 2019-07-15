@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def feed
-    @activites = Activity.follow_current_user Relationship.follower_ids(id), id
-    @activites.available_act(id)
+    @activity = Activity.follow_current_user Relationship.follower_ids(id) << id
+    @activity.available_act(id)
   end
 end
